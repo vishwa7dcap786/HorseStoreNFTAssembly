@@ -1,5 +1,5 @@
 <p align="center">
-![image](https://github.com/user-attachments/assets/924bea88-2d75-44f1-9069-2186a7e6a7e8)
+<img src="https://github.com/user-attachments/assets/924bea88-2d75-44f1-9069-2186a7e6a7e8" width="400" alt="horse-store">
 <br/>
 # Horse Store 
 
