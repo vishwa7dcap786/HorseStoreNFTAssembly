@@ -1,7 +1,6 @@
 <p align="center">
-<img src="[./images/horse-store.png](https://github.com/Cyfrin/1-horse-store-s23/raw/main/images/horse-store.png)" width="400" alt="horse-store">
+![image](https://github.com/user-attachments/assets/924bea88-2d75-44f1-9069-2186a7e6a7e8)
 <br/>
-
 # Horse Store 
 
 This is the codebase to learn how compilers and opcodes work. We will be dissecting contracts.
