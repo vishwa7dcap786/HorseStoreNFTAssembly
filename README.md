@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./images/horse-store.png" width="400" alt="horse-store">
+<img src="[./images/horse-store.png](https://github.com/Cyfrin/1-horse-store-s23/raw/main/images/horse-store.png)" width="400" alt="horse-store">
 <br/>
 
 # Horse Store 
