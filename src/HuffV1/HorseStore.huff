@@ -1,0 +1,44 @@
+
+#define function updateHorseNumber(uint256) nonpayable returns()
+#define function readNumberOfHorses() view returns(uint256)
+
+#define constant NUMBER_OF_HORSES_LOCATION = FREE_STORAGE_POINTER()
+
+#define macro SET_NUMBER_OF_HORSES() = takes(0) returns(0){
+    0x04
+    calldataload
+    [NUMBER_OF_HORSES_LOCATION]
+    sstore
+    stop
+}
+
+#define macro READ_NUMBER_OF_HORSES() = takes(0) returns(0){
+    [NUMBER_OF_HORSES_LOCATION]
+    sload
+    0x00 mstore
+    0x20 0x00 return
+}
+
+#define macro MAIN() = takes(0) returns(0){
+    0x00
+    calldataload
+    push1 0xe0
+    shr
+    dup1 __FUNC_SIG(updateHorseNumber) eq updateJump jumpi
+    dup1 __FUNC_SIG(readNumberOfHorses) eq readJump jumpi
+    
+    updateJump:
+        SET_NUMBER_OF_HORSES()
+    readJump:
+        READ_NUMBER_OF_HORSES()
+    
+}
+
+/*
+curl -L https://foundry.paradigm.xyz | bash
+source /home/gitpod/.bashrc
+foundryup
+curl -L get.huff.sh | bash
+source /home/gitpod/.bashrc
+huffup
+*/
